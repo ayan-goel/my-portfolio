@@ -1,38 +1,228 @@
-.App {
+/* Global Variables */
+:root {
+  --primary-color: #343a40;      /* Dark gray/black */
+  --secondary-color: #23272b;    /* Slightly darker for hover effects */
+  --accent-color: #f8d210;       /* Accent yellow */
+  --light-bg: #f8f9fa;           /* Light background */
+  --dark-text: #333333;
+  --font-family: 'Poppins', sans-serif;
+  --transition-speed: 0.3s;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: #f8f9fa; /* Fallback background */
+  background: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  /* Fallback background for older browsers */
+  background: #343a40;
+  background: linear-gradient(45deg, #343a40, #23272b);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+}
+
+.navbar .nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-list li {
+  margin: 0 15px;
+}
+
+.navbar .nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+.navbar .nav-list li a:hover {
+  color: var(--accent-color);
+}
+
+/* Home Page */
+.home {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  /* Fallback gradient */
+  background: #f8d210;
+  background: linear-gradient(90deg, #f8d210, #343a40);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home p {
+  font-size: 1.2rem;
+}
+
+/* About Page */
+.about {
+  padding: 40px 20px;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Projects Page */
+.projects {
+  padding: 40px 20px;
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.project {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.project:hover {
+  transform: scale(1.03);
+  box-shadow: var(--box-shadow-elevated);
+}
+
+.project img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project h3 {
+  margin: 15px;
+  font-size: 1.5rem;
+}
+
+.project p {
+  margin: 15px;
+  font-size: 1rem;
+}
+
+/* Contact Page */
+.contact {
+  padding: 40px 20px;
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Contact Form */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contact form input,
+.contact form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color var(--transition-speed);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.contact form button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);}
+
+.contact form button:hover {
+  background: var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+/* Utility classes */
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
 }
