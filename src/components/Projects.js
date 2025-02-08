@@ -1,24 +1,24 @@
 import React from 'react';
 
 const Projects = () => (
-  <div className="projects">
+  <div className="content-container">
     <h1>My Projects</h1>
     <div className="project-list">
       <div className="project">
         <h3>MediSense AI</h3>
-        <p>Description of project 1. <a href="https://link-to-project1.com" target="_blank" rel="noopener noreferrer">View Project</a></p>
+        <p>An AI-powered medical diagnosis assistant that helps healthcare professionals make more accurate diagnoses. <a href="https://link-to-project1.com" target="_blank" rel="noopener noreferrer">View Project</a></p>
       </div>
       <div className="project">
         <h3>SpeakEasy</h3>
-        <p>Description of project 2. <a href="https://link-to-project2.com" target="_blank" rel="noopener noreferrer">View Project</a></p>
+        <p>A language learning platform that uses AI to provide personalized conversation practice. <a href="https://link-to-project2.com" target="_blank" rel="noopener noreferrer">View Project</a></p>
       </div>
       <div className="project">
         <h3>Premier League Betting Assistant</h3>
-        <p>Description of project 3. <a href="https://link-to-project2.com" target="_blank" rel="noopener noreferrer">View Project</a></p>
+        <p>Machine learning model for predicting Premier League match outcomes. <a href="https://link-to-project3.com" target="_blank" rel="noopener noreferrer">View Project</a></p>
       </div>
       <div className="project">
         <h3>Trading Competition UI</h3>
-        <p>Description of project 4. <a href="https://link-to-project2.com" target="_blank" rel="noopener noreferrer">View Project</a></p>
+        <p>A modern interface for managing and participating in trading competitions. <a href="https://link-to-project4.com" target="_blank" rel="noopener noreferrer">View Project</a></p>
       </div>
     </div>
   </div>
