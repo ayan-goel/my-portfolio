@@ -7,7 +7,7 @@ const Home = () => (
         Hi! I'm <span className="highlight-name">Ayan</span>.
       </h1>
       <p>
-        I'm currently a junior at the Georgia Institute of Technology studying computer science, and have hands-on experience through <strong>coding projects</strong>, <strong>engineering research</strong>, and <strong>internship experience</strong>. These experiences have equipped me with the skills to tackle real-world challenges and collaborate effectively with diverse teams. My goals are to continue expanding my expertise in various programming languages and software while taking on new CS-related <strong>projects</strong>, <strong>undergraduate research opportunities</strong>, and <strong>internships</strong> to further develop my skills.
+      I’m a junior at the Georgia Institute of Technology pursuing a degree in Computer Science. Through hands-on coding <strong>projects</strong>, <strong>engineering research</strong>, and <strong>internship experience</strong>, I’ve developed strong problem-solving skills and the ability to collaborate effectively with diverse teams. My goal is to continue expanding my expertise in programming languages and software development while seeking new opportunities in CS-related projects, undergraduate research, and nternships to further enhance my skills and industry experience.
       </p>
     </div>
     <div className="profile-image">

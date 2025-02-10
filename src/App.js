@@ -71,7 +71,7 @@ function App() {
               },
               move: {
                 enable: true,
-                speed: 2,
+                speed: 1,
                 direction: "none",
                 random: false,
                 straight: false,
@@ -85,8 +85,8 @@ function App() {
               },
               wobble: {
                 enable: true,
-                distance: 10,
-                speed: 10
+                distance: 8,
+                speed: 8
               },
               zIndex: {
                 value: 0,
